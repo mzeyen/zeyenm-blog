@@ -1,5 +1,12 @@
-<h1>Create an article</h1>
-
+<h1>Neuen Artikel anlegen</h1>
+<% if @article.errors.any? %>
+    <h2>Die folgenden Fehler sind aufgetreten.</h2>
+<ul>
+    <% @article.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+</ul>
+<% end %>
 <%= form_for @article do |a| %>
     <p>
       <%= a.label :title %><br/>
@@ -12,5 +19,4 @@
     <p>
       <%= a.submit %>
     </p>
-
 <% end %>
