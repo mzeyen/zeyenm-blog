@@ -1,3 +1,5 @@
 <h1>Angelegter Artikel</h1>
 <p>Titel: <%=	 @article.title %></p>
 <p>Beschreibung: <%= @article.description %></p>
+<%= link_to 'Eintrag bearbeiten', edit_article_path(@article) %> |
+<%= link_to 'Zurück zur Artikelübersicht', articles_path %>
