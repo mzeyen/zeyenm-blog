@@ -13,9 +13,7 @@ gem 'sass-rails', '>= 3.2'
 
 # Use bootstrap for styling
 gem 'bootstrap-sass', '~> 3.3.6'
-
 gem 'jquery-rails', platforms: [:mri, :mingw, :x64_mingw]
-
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use Uglifier as compressor for JavaScript assets
