@@ -11,6 +11,8 @@ gem 'rails', '~> 5.1.4'
 
 gem 'sass-rails', '>= 3.2'
 
+gem 'bcrypt', '~> 3.1.7'
+
 # Use bootstrap for styling
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails', platforms: [:mri, :mingw, :x64_mingw]
