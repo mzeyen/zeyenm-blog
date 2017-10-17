@@ -1,0 +1,19 @@
+current directory: /home/mrbones/zeyenm-blog/vendor/bundle/gems/byebug-9.1.0/ext/byebug
+/package/host/localhost/ruby-2.4.1/bin/ruby -r ./siteconf20171017-4440-1xey702.rb extconf.rb
+creating Makefile
+
+current directory: /home/mrbones/zeyenm-blog/vendor/bundle/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/mrbones/zeyenm-blog/vendor/bundle/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/mrbones/zeyenm-blog/vendor/bundle/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20171017-4440-19gdp6u/byebug

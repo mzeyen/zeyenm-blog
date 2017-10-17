@@ -7,6 +7,8 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+
+gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 gem 'rails', '~> 5.1.4'
 
 gem 'sass-rails', '>= 3.2'
@@ -16,6 +18,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '3.1.5'
 
 gem 'bootstrap-will_paginate', '0.0.10'
+
+gem 'unicorn'
 
 # Use bootstrap for styling
 gem 'bootstrap-sass', '~> 3.3.6'

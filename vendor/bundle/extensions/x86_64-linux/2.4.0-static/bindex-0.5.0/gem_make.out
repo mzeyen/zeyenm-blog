@@ -1,0 +1,15 @@
+current directory: /home/mrbones/zeyenm-blog/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+/package/host/localhost/ruby-2.4.1/bin/ruby -r ./siteconf20171017-4440-jvostx.rb extconf.rb
+creating Makefile
+
+current directory: /home/mrbones/zeyenm-blog/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /home/mrbones/zeyenm-blog/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+current directory: /home/mrbones/zeyenm-blog/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20171017-4440-hdjhgw/bindex
