@@ -17,19 +17,27 @@
         <li id="nav"><%= link_to "Artikel", articles_path %></li>
         <li id="nav"><%= link_to "User", users_path %></li>
         <li id="nav"><%= link_to 'Über', about_path %></li>
-        <% if session[:user_id].nil? %>
-        <li id="nav"><%= link_to 'Anmelden', login_path  %></li>
-        <% else %>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Aktionen <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <%= link_to "Neuen Artikel anlegen", new_article_path %>
-          </ul>
-        </li>
-        <p class="navbar-text">Willkommen, <%= session[:user_name] %></p>
-        <li id="nav"><%= link_to "Abmelden", logout_path, method: :delete  %></li>
+        <% if logged_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Aktionen <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <%= link_to "Neuen Artikel anlegen", new_article_path %>
+            </ul>
+          </li>
+          <p class="navbar-text">Willkommen, <%= session[:user_name] %></p>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dein Profil <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Profil bearbeiten", edit_user_path(current_user) %></li>
+              <li><%= link_to "Profil anzeigen", user_path(current_user) %></li>
+            </ul>
+          </li>
+          <li id="nav"><%= link_to "Abmelden", logout_path, method: :delete  %></li>
+          <% else %>
+          <li id="nav"><%= link_to 'Anmelden', login_path  %></li>
+          <li id="nav"><%= link_to 'Neu registrieren', signup_path  %></li>
+        <% end %>
       </ul>
-      <% end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

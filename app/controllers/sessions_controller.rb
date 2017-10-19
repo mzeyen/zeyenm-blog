@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
             session[:user_id] = user.id
             session[:user_name] = user.username
             flash[:success] = "Sie wurden erfolgreich angemeldet."
-            redirect_to users_path(user)
+            redirect_to user_path(user)
             
         else
             flash.now[:danger] = "Fehler bei Anmeldedaten !!!"
