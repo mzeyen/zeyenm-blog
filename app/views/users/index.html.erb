@@ -10,6 +10,11 @@
               <%= link_to user.username, user_path(user) %>
           </li>
           <li><small><%= user.articles.count if user.articles %> Artikel </small></li>
+          <% if logged_in? and current_user.admin? %>
+            <li><%= link_to "User löschen", user_path(user), method: :delete, 
+                  data: { confirm: "Diesen User und all seine Artikel löschen?"}, 
+                  class: "btn btn-xs btn-danger" %></li>
+          <% end %>
         </div>
       </div>
     </ul>
