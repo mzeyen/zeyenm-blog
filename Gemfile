@@ -13,13 +13,14 @@ gem 'rails', '~> 5.1.4'
 
 gem 'sass-rails', '>= 3.2'
 
-gem 'bcrypt', '~> 3.1.7'
-
 gem 'will_paginate', '3.1.5'
 
 gem 'bootstrap-will_paginate', '0.0.10'
 
-gem 'unicorn'
+platforms :ruby do
+  gem 'unicorn'
+  gem 'bcrypt', '~> 3.1.7'
+end
 
 # Use bootstrap for styling
 gem 'bootstrap-sass', '~> 3.3.6'
@@ -30,6 +31,8 @@ gem 'puma', '~> 3.7'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
+gem 'coffee-script-source', '1.8.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -46,8 +49,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
