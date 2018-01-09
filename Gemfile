@@ -13,8 +13,6 @@ gem 'rails', '~> 5.1.4'
 
 gem 'sass-rails', '>= 3.2'
 
-gem 'bcrypt', '~> 3.1.7'
-
 gem 'will_paginate', '3.1.5'
 
 gem 'bootstrap-will_paginate', '0.0.10'
@@ -40,7 +38,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
