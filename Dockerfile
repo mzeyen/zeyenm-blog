@@ -19,11 +19,7 @@ WORKDIR /app
 # will be cached unless changes to one of those two files
 # are made.
 COPY Gemfile Gemfile.lock ./
-RUN gem install bundler && bundle install --jobs 20 --retry 5
-
-# Create db and start migration
-RUN rails db:create
-RUN rails db:migrate RAILS_ENV=development
+RUN gem install bundler && bundle install
 
 # Copy the main application.
 COPY . ./
@@ -32,11 +28,11 @@ COPY . ./
 # from the outside.
 EXPOSE 3000
 
+# Configure an entry point, so we don't need to specify 
+# "bundle exec" for each of our commands.
+ENTRYPOINT ["bundle", "exec"]
+
 # The main command to run when the container starts. Also
 # tell the Rails dev server to bind to all interfaces by
 # default.
 CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
-
-# Create db and start migration
-RUN rake db:create
-RUN rails db:migrate RAILS_ENV=development

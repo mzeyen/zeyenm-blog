@@ -5,20 +5,9 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Running application using docker:
 
-* System dependencies
+    * pull image from docker hub: **docker pull mzeyen/zeyenm-blog:latest**
+    * start container: **docker run -it -p 80:3000 mzeyen/zeyenm-blog:latest**
+    * start container with mounted volume: **docker run -it -p 80:3000 -v {local folder path}:/app mzeyen/zeyenm-blog:latest**
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
