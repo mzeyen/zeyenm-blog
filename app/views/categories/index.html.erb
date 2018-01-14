@@ -9,6 +9,13 @@
                     <%= link_to "#{category.name}", category_path(category) %>
                 </li>
                 <li><small><%= category.articles.count  %> Artikel</small></li>
+                <% if logged_in? and current_user.admin? %>
+        <div class="article-actions">
+          <%= link_to 'Kategorie bearbeiten', edit_category_path(category), class: "btn btn-xs btn-primary" %>
+          <%= link_to 'Kategorie löschen', categories_path(category), method: :delete, 
+                                      data: { confirm: "Möchten Sie den Artikel wirklich löschen?"}, class: "btn btn-xs btn-danger" %>
+        </div>
+        <% end %>
             </div>
         </div>
     </ul>
