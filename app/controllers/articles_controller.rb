@@ -6,8 +6,7 @@ class ArticlesController < ApplicationController
   
 
   def article_params
-
-    params.require(:article).permit(:title, :description, :username)
+    params.require(:article).permit(:title, :description, :username, category_ids: [])
   end
 
   def index
