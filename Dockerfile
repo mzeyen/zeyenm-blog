@@ -1,4 +1,4 @@
-FROM ruby:2.2
+FROM ruby:2.5.0
 MAINTAINER maik_zeyen@web.de
 
 # Install apt based dependencies required to run Rails as
